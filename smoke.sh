@@ -8,4 +8,4 @@ allure generate -c allure-report -o allure-results-html
 echo "Combine Allure report..."
 allure-combine ./allure-results-html
 
-echo "Report generated at: http://localhost:63342/pythonLearn/allure-results-html/index.html"
+echo "Report generated at: http://208.87.133.122:63342/var/lib/jenkins/workspace/pythonLearn/allure-results-html/index.html"
