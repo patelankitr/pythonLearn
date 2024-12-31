@@ -9,6 +9,6 @@ echo "Generate Allure report..."
 allure generate -c allure-report -o allure-results-html
 
 echo "Combine Allure report..."
-allure-combine ./allure-results-html
+
 
 echo "Report generated at: /var/lib/jenkins/workspace/pythonLearn/allure-results-html/index.html"
