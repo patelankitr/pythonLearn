@@ -1,6 +1,8 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
 
 @pytest.fixture(scope="function")
 def setup():
@@ -11,7 +13,8 @@ def setup():
     chrome_options.add_argument('--disable-dev-shm-usage')  # For certain Linux environments
 
     # Initialize the WebDriver with options
-    driver = webdriver.Chrome(options=chrome_options)
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=chrome_options)
 
     driver.get('https://www.supremacy1914.com')
     driver.maximize_window()
